@@ -1,0 +1,14 @@
+﻿<Page x:Class="Mubox.QuickLaunch.Pages.ErrorPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="ErrorPage"
+      Background="Azure" MouseDown="Page_MouseDown">
+    <Grid>
+        <Ellipse Margin="12,12,0,0" Name="ellipse1" Stroke="Black" Fill="Red"  Height="48" HorizontalAlignment="Left" VerticalAlignment="Top" Width="48" />
+        <Rectangle Margin="17,31,0,0" Name="rectangle1" Stroke="Black" Fill="Yellow" Height="11" VerticalAlignment="Top" HorizontalAlignment="Left" Width="38" />
+        <TextBlock Margin="72,12,12,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="24">Error</TextBlock>
+        <TextBlock Margin="72,42,12,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="12" Foreground="DarkGray" Text="{Binding Message}" TextWrapping="Wrap" Height="Auto"/>
+        <TextBlock Margin="71,41,13,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="12" Foreground="Black" Text="{Binding Message}" TextWrapping="Wrap" Height="Auto"/>
+        <TextBlock Padding="8" Margin="11,89,13,0" Height="34" VerticalAlignment="Top">&gt;&gt; <Hyperlink Name="linkTryAgain">Try Again</Hyperlink></TextBlock>
+    </Grid>
+</Page>

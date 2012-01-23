@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mubox", "Mubox\Mubox.csproj", "{D1F5FEEC-7438-46F3-8DAA-641CED5D8939}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mubox.QuickLaunch", "Mubox.QuickLaunch\Mubox.QuickLaunch.csproj", "{6776AAE8-F646-46FB-BA3F-11DE575CF0A3}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs03
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Mubox.QuickLaunch\\Mubox.QuickLaunch.csproj
+		SccProjectName1 = Mubox.QuickLaunch
+		SccLocalPath1 = Mubox.QuickLaunch
+		SccProjectUniqueName2 = Mubox\\Mubox.csproj
+		SccProjectName2 = Mubox
+		SccLocalPath2 = Mubox
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1F5FEEC-7438-46F3-8DAA-641CED5D8939}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1F5FEEC-7438-46F3-8DAA-641CED5D8939}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1F5FEEC-7438-46F3-8DAA-641CED5D8939}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1F5FEEC-7438-46F3-8DAA-641CED5D8939}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6776AAE8-F646-46FB-BA3F-11DE575CF0A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6776AAE8-F646-46FB-BA3F-11DE575CF0A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6776AAE8-F646-46FB-BA3F-11DE575CF0A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6776AAE8-F646-46FB-BA3F-11DE575CF0A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

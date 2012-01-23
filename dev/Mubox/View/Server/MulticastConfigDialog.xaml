@@ -1,0 +1,32 @@
+﻿<Window x:Class="Mubox.View.Server.MulticastConfigDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mubox="clr-namespace:Mubox.View.Controls"
+    Title="Keyboard Configuration | Mubox" Height="310" Width="463"
+        WindowStartupLocation="CenterScreen"
+        Topmost="True"
+        ResizeMode="NoResize">
+    <Grid>
+        <TabControl Name="tabControl1" SelectionChanged="tabControl1_SelectionChanged" Loaded="tabControl1_Loaded">
+            <TabItem Header="Multicast Configuration" Name="tabActiveClientOnly">
+                <Grid>
+                    <TextBlock Margin="0,6,0,0" Name="textBlock1" Foreground="Black" Padding="4" FontSize="10" TextWrapping="Wrap" Height="50" VerticalAlignment="Top" Text="Mubox can 'Multicast' your key presses to all Clients, simultaneously. Use the virtual keyboard below to configure keys which go to the 'Active Client' only, these settings only apply on the 'Server' machine. The first time you 'Enable Multicast' some defaults are applied." HorizontalAlignment="Left" Width="431"></TextBlock>
+                    <CheckBox Height="19" HorizontalAlignment="Left" Margin="5,0,0,2.04" Name="checkEnableMulticast" VerticalAlignment="Bottom" Width="167" Foreground="Black" FontWeight="Bold" FontSize="13" HorizontalContentAlignment="Left" VerticalContentAlignment="Top">Enable Multicast</CheckBox>
+                    <mubox:VKBoard x:Name="vkBoardActiveClientOnly" Margin="0,59,0,0" Height="147" VerticalAlignment="Top" HorizontalAlignment="Left" Width="430" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="Round-Robin Keys" Name="tabRoundRobinKeys">
+                <Grid>
+                    <TextBlock FontSize="10" Foreground="Black" Height="50" Margin="0,6,0,0" Padding="4" Text="If you would like certain keys to only multicast to one client at a time, and to each client sequentially (e.g. 'round robin') then you can toggle those keys below." TextWrapping="Wrap" VerticalAlignment="Top" />
+                    <mubox:VKBoard Margin="0,59,0,0" x:Name="vkBoardRoundRobin" Height="147" VerticalAlignment="Top" HorizontalAlignment="Left" Width="430" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="Desktop Hot Keys" Name="tabSendToDesktop">
+                <Grid>
+                    <TextBlock FontSize="10" Foreground="Black" Height="50" Margin="0,6,0,0" Padding="4" Text="Mubox redirects your input at one or more Clients, thus preventing most Hot Keys programs from working. If you need to configure Hot Keys for applications such as Ventrillo you should do it here." TextWrapping="Wrap" VerticalAlignment="Top" />
+                    <mubox:VKBoard Margin="0,59,0,0" x:Name="vkBoardSendToDesktop" Height="147" VerticalAlignment="Top" HorizontalAlignment="Left" Width="430" />
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

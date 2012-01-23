@@ -1,0 +1,36 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Color x:Key="MuboxPrimaryColor">Red</Color>
+    <Color x:Key="MuboxPrimaryContrastColor">Tomato</Color>
+    <Color x:Key="MuboxHiliteColor">Crimson</Color>
+    <Color x:Key="MuboxHiliteContrastColor">DarkRed</Color>
+    <Color x:Key="MuboxBackgroundColor">Black</Color>
+    <Color x:Key="MuboxTextForegroundColor">White</Color>
+    <Color x:Key="MuboxButtonTextForegroundColor">Black</Color>
+
+    <SolidColorBrush x:Key="MuboxPrimaryColorBrush" Color="{DynamicResource MuboxPrimaryContrastColor}" />
+    <SolidColorBrush x:Key="MuboxPrimaryContrastColorBrush" Color="{DynamicResource MuboxPrimaryContrastColor}" />
+    <SolidColorBrush x:Key="MuboxHiliteColorBrush" Color="{DynamicResource MuboxHiliteColor}" />
+    <SolidColorBrush x:Key="MuboxHiliteContrastColorBrush" Color="{DynamicResource MuboxHiliteContrastColor}" />
+    <SolidColorBrush x:Key="MuboxBackgroundColorBrush" Color="{DynamicResource MuboxBackgroundColor}" />
+    <SolidColorBrush x:Key="MuboxTextForegroundColorBrush" Color="{DynamicResource MuboxTextForegroundColor}" />
+    <SolidColorBrush x:Key="MuboxButtonTextForegroundColorBrush" Color="{DynamicResource MuboxButtonTextForegroundColor}" />
+
+    <LinearGradientBrush x:Key="MuboxServerWindowHeaderBrush" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Color="{DynamicResource MuboxPrimaryColor}" Offset="0" />
+        <GradientStop Color="{DynamicResource MuboxPrimaryContrastColor}" Offset="0.33" />
+        <GradientStop Color="{DynamicResource MuboxHiliteColor}" Offset="0.66" />
+        <GradientStop Color="{DynamicResource MuboxHiliteContrastColor}" Offset="0.9" />
+        <GradientStop Color="{DynamicResource MuboxBackgroundColor}" Offset="1" />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="MuboxServerWindowButtonBrush" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Color="{DynamicResource MuboxPrimaryColor}" Offset="0" />
+        <GradientStop Color="{DynamicResource MuboxPrimaryContrastColor}" Offset="0.33" />
+        <GradientStop Color="{DynamicResource MuboxHiliteColor}" Offset="0.66" />
+        <GradientStop Color="{DynamicResource MuboxHiliteContrastColor}" Offset="1" />
+    </LinearGradientBrush>
+
+</ResourceDictionary>

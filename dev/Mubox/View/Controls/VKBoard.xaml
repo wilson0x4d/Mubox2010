@@ -1,0 +1,125 @@
+﻿<UserControl x:Class="Mubox.View.Controls.VKBoard"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Height="147" Width="430">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Mubox;component/View/Skins/VKBoardSkins.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid Margin="0" Background="Black">
+        <WrapPanel Margin="4,4,0,0" Height="Auto" VerticalAlignment="Top" HorizontalAlignment="Left" Width="358">
+            <ToggleButton Tag="Escape" Width="22" Height="18">Esc</ToggleButton>
+            <ToggleButton Tag="F1" Width="21" Height="18">F1</ToggleButton>
+            <ToggleButton Tag="F2" Width="21" Height="18">F2</ToggleButton>
+            <ToggleButton Tag="F3" Height="18" Width="21">F3</ToggleButton>
+            <ToggleButton Tag="F4" Height="18" Width="21">F4</ToggleButton>
+            <ToggleButton Tag="F5" Height="18" Width="21">F5</ToggleButton>
+            <ToggleButton Tag="F6" Height="18" Width="21">F6</ToggleButton>
+            <ToggleButton Tag="F7" Height="18" Width="21">F7</ToggleButton>
+            <ToggleButton Tag="F8" Height="18" Width="21">F8</ToggleButton>
+            <ToggleButton Tag="F9" Height="18" Width="21">F9</ToggleButton>
+            <ToggleButton Tag="F10" Height="18" Width="21">F10</ToggleButton>
+            <ToggleButton Tag="F11" Height="18" Width="21">F11</ToggleButton>
+            <ToggleButton Tag="F12" Height="18" Width="21">F12</ToggleButton>
+            <ToggleButton Tag="Print" Height="18" Width="21">Prt</ToggleButton>
+            <ToggleButton Tag="Pause" Height="18" Width="21">Brk</ToggleButton>
+            <ToggleButton Tag="Insert" Height="18" Width="21">Ins</ToggleButton>
+            <ToggleButton Tag="Delete" Height="18" Width="21">Del</ToggleButton>
+            <ToggleButton Tag="Tilde" Height="24" Width="19">`</ToggleButton>
+            <ToggleButton Tag="N1" Height="24" Width="24">1</ToggleButton>
+            <ToggleButton Tag="N2" Height="24" Width="24">2</ToggleButton>
+            <ToggleButton Tag="N3" Height="24" Width="24">3</ToggleButton>
+            <ToggleButton Tag="N4" Height="24" Width="24">4</ToggleButton>
+            <ToggleButton Tag="N5" Height="24" Width="24">5</ToggleButton>
+            <ToggleButton Tag="N6" Height="24" Width="24">6</ToggleButton>
+            <ToggleButton Tag="N7" Height="24" Width="24">7</ToggleButton>
+            <ToggleButton Tag="N8" Height="24" Width="24">8</ToggleButton>
+            <ToggleButton Tag="N9" Height="24" Width="24">9</ToggleButton>
+            <ToggleButton Tag="N0" Height="24" Width="24">0</ToggleButton>
+            <ToggleButton Tag="OEMMinus" Height="24" Width="24">-</ToggleButton>
+            <ToggleButton Tag="OEMPlus" Height="24" Width="24">=</ToggleButton>
+            <ToggleButton Tag="Back" Height="24" Width="51">Bkspace</ToggleButton>
+            <ToggleButton Tag="Tab" Height="24" Width="32">Tab</ToggleButton>
+            <ToggleButton Tag="Q" Height="24" Width="24">Q</ToggleButton>
+            <ToggleButton Tag="W" Height="24" Width="24">W</ToggleButton>
+            <ToggleButton Tag="E" Height="24" Width="24">E</ToggleButton>
+            <ToggleButton Tag="R" Height="24" Width="24">R</ToggleButton>
+            <ToggleButton Tag="T" Height="24" Width="24">T</ToggleButton>
+            <ToggleButton Tag="Y" Height="24" Width="24">Y</ToggleButton>
+            <ToggleButton Tag="U" Height="24" Width="24">U</ToggleButton>
+            <ToggleButton Tag="I" Height="24" Width="24">I</ToggleButton>
+            <ToggleButton Tag="O" Height="24" Width="24">O</ToggleButton>
+            <ToggleButton Tag="P" Height="24" Width="24">P</ToggleButton>
+            <ToggleButton Tag="OpenBracket" Height="24" Width="24">[</ToggleButton>
+            <ToggleButton Tag="CloseBracket" Height="24" Width="24">]</ToggleButton>
+            <ToggleButton Tag="Backslash" Height="24" Width="38">\</ToggleButton>
+            <ToggleButton Tag="Capital" Height="24" Width="38">Caps</ToggleButton>
+            <ToggleButton Tag="A" Height="24" Width="24">A</ToggleButton>
+            <ToggleButton Tag="S" Height="24" Width="24">S</ToggleButton>
+            <ToggleButton Tag="D" Height="24" Width="24">D</ToggleButton>
+            <ToggleButton Tag="F" Height="24" Width="24">F</ToggleButton>
+            <ToggleButton Tag="G" Height="24" Width="24">G</ToggleButton>
+            <ToggleButton Tag="H" Height="24" Width="24">H</ToggleButton>
+            <ToggleButton Tag="J" Height="24" Width="24">J</ToggleButton>
+            <ToggleButton Tag="K" Height="24" Width="24">K</ToggleButton>
+            <ToggleButton Tag="L" Height="24" Width="24">L</ToggleButton>
+            <ToggleButton Tag="Semicolon" Height="24" Width="24">;</ToggleButton>
+            <ToggleButton Tag="Apostrophe" Height="24" Width="24">'</ToggleButton>
+            <ToggleButton Tag="Return" Height="24" Width="56">Return</ToggleButton>
+            <ToggleButton Tag="LeftShift" Height="24" Width="50" Visibility="Hidden">Shift</ToggleButton>
+            <ToggleButton Tag="Z" Height="24" Width="24">Z</ToggleButton>
+            <ToggleButton Tag="X" Height="24" Width="24">X</ToggleButton>
+            <ToggleButton Tag="C" Height="24" Width="24">C</ToggleButton>
+            <ToggleButton Tag="V" Height="24" Width="24">V</ToggleButton>
+            <ToggleButton Tag="B" Height="24" Width="24">B</ToggleButton>
+            <ToggleButton Tag="N" Height="24" Width="24">N</ToggleButton>
+            <ToggleButton Tag="M" Height="24" Width="24">M</ToggleButton>
+            <ToggleButton Tag="OEMComma" Height="24" Width="24">,</ToggleButton>
+            <ToggleButton Tag="OEMPeriod" Height="24" Width="24">.</ToggleButton>
+            <ToggleButton Tag="Question" Height="24" Width="24">/</ToggleButton>
+            <ToggleButton Tag="RightShift" Height="24" Width="68" Visibility="Hidden">Shift</ToggleButton>
+            <ToggleButton Tag="LeftControl" Height="24" Width="24" Visibility="Hidden">Ctrl</ToggleButton>
+            <ToggleButton Tag="PA1" Height="24" Width="24" Visibility="Hidden">Fn</ToggleButton>
+            <ToggleButton Tag="LeftWindows" Height="24" Width="24">Wn</ToggleButton>
+            <ToggleButton Tag="LeftMenu" Height="24" Width="24" Visibility="Hidden">Alt</ToggleButton>
+            <ToggleButton Tag="Space" Height="24" Width="122">Space Bar</ToggleButton>
+            <ToggleButton Tag="RightMenu" Height="24" Width="24" Visibility="Hidden">Alt</ToggleButton>
+            <ToggleButton Tag="Application" Height="24" Width="24">≡</ToggleButton>
+            <ToggleButton Tag="RightControl" Height="24" Width="24" Visibility="Hidden">Ctrl</ToggleButton>
+        </WrapPanel>
+        <Grid HorizontalAlignment="Left" Margin="298,120,0,0" Name="grid1" Width="63" Height="26" VerticalAlignment="Top" TextBlock.FontSize="7">
+            <ToggleButton Tag="Right" HorizontalAlignment="Left" Width="21" Margin="42,12,0,0" Height="11" VerticalAlignment="Top">→</ToggleButton>
+            <ToggleButton Tag="Up" Height="12" Margin="21,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="21">↑</ToggleButton>
+            <ToggleButton Tag="Down" Margin="21,12,0,0" Height="11" VerticalAlignment="Top" HorizontalAlignment="Left" Width="21">↓</ToggleButton>
+            <ToggleButton Tag="Left" HorizontalAlignment="Left" Width="21" Margin="0,12,0,0" Height="11" VerticalAlignment="Top">←</ToggleButton>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Margin="366,23,0,0" Name="grid2" Width="60" Height="120" VerticalAlignment="Top">
+            <ToggleButton Tag="NumLock" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left" Width="20">Nm</ToggleButton>
+            <ToggleButton Tag="Divide" Height="20" Margin="20,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="20">/</ToggleButton>
+            <ToggleButton Tag="Multiply" Height="20" HorizontalAlignment="Left" Margin="40,0,0,0" VerticalAlignment="Top" Width="20">*</ToggleButton>
+            <ToggleButton Tag="Decimal" Height="20" HorizontalAlignment="Left" Margin="0,20,0,0" VerticalAlignment="Top" Width="20">.</ToggleButton>
+            <ToggleButton Tag="Add" Height="20" Margin="20,20,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="20">+</ToggleButton>
+            <ToggleButton Tag="Subtract" Height="20" HorizontalAlignment="Left" Margin="40,20,0,0" VerticalAlignment="Top" Width="20">-</ToggleButton>
+            <ToggleButton Tag="Numpad7" HorizontalAlignment="Left" Margin="0,40,0,0" Width="20" Height="20" VerticalAlignment="Top">7</ToggleButton>
+            <ToggleButton Tag="Numpad8" Margin="20,40,0,0" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left" Width="20">8</ToggleButton>
+            <ToggleButton Tag="Numpad9" HorizontalAlignment="Left" Margin="40,40,0,0" Width="20" Height="20" VerticalAlignment="Top">9</ToggleButton>
+            <ToggleButton Tag="Numpad4" HorizontalAlignment="Left" Margin="0,60,0,0" Width="20" Height="20" VerticalAlignment="Top">4</ToggleButton>
+            <ToggleButton Tag="Numpad5" Margin="20,60,0,0" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left" Width="20">5</ToggleButton>
+            <ToggleButton Tag="Numpad6" Margin="40,60,0,0" HorizontalAlignment="Left" Width="20" Height="20" VerticalAlignment="Top">6</ToggleButton>
+            <ToggleButton Tag="Numpad1" Height="20" HorizontalAlignment="Left" Margin="0,80,0,0" VerticalAlignment="Top" Width="20">1</ToggleButton>
+            <ToggleButton Tag="Numpad2" Height="20" Margin="20,80,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="20">2</ToggleButton>
+            <ToggleButton Tag="Numpad3" Height="20" Margin="40,80,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="20">3</ToggleButton>
+            <ToggleButton Tag="Numpad0" Height="20" HorizontalAlignment="Left" Margin="0,100,0,0" VerticalAlignment="Top" Width="20">0</ToggleButton>
+            <ToggleButton Tag="Execute" Height="20" Margin="20,100,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="40">Enter</ToggleButton>
+        </Grid>
+        <Grid Height="10" Margin="366.8,4,0,0" Name="grid3" VerticalAlignment="Top" HorizontalAlignment="Left" Width="59.6" Visibility="Hidden">
+            <Rectangle HorizontalAlignment="Left" Name="rectangle1" Fill="#333333" Width="59.6" Height="10" VerticalAlignment="Top" />
+            <Rectangle Height="6" HorizontalAlignment="Left" Margin="4,2.4,0,0" Name="rectangle2" Fill="#00FF00" VerticalAlignment="Top" Width="16" />
+            <Rectangle Fill="Lime" Height="6" HorizontalAlignment="Left" Margin="40,2.4,0,0" Name="rectangle3" VerticalAlignment="Top" Width="16" />
+            <Rectangle Fill="Lime" Height="6" HorizontalAlignment="Left" Margin="22,2.4,0,0" Name="rectangle4" VerticalAlignment="Top" Width="16" />
+        </Grid>
+    </Grid>
+</UserControl>

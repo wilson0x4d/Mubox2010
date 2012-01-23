@@ -1,0 +1,145 @@
+﻿<Window x:Class="Mubox.View.Server.ServerWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ext="clr-namespace:System.Windows.Extensions"
+    xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+    xmlns:dat="clr-namespace:System.Windows.Data;assembly=PresentationFramework"
+        Title=""
+        Height="240" Width="500"
+        Loaded="Window_Loaded"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        ShowInTaskbar="False"
+        Topmost="True" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+        Style="{DynamicResource MuboxServerWindowStyle}">
+    <Window.Resources>
+        <CollectionViewSource
+            x:Key="ClientListViewSource"
+            Source="{Binding Path=ClientWindowProvider, RelativeSource={RelativeSource AncestorType={x:Type Window}, Mode=FindAncestor}}"
+            >
+            <CollectionViewSource.SortDescriptions>
+                <scm:SortDescription PropertyName="LastActivatedTimestamp" Direction="Descending" />
+            </CollectionViewSource.SortDescriptions>
+        </CollectionViewSource>
+    </Window.Resources>
+    <ext:WindowChrome.WindowChrome>
+        <ext:WindowChrome
+            CaptionHeight="0"
+            ClientBorderThickness="0"
+            RoundCorners="True"
+            RoundCornersRadius="9"
+            UseGlassFrame="False"
+            >
+        </ext:WindowChrome>
+    </ext:WindowChrome.WindowChrome>
+    <Grid>
+        <Rectangle Style="{DynamicResource MuboxServerWindowHeaderStyle}" Name="rectangle1" Stroke="Black" Height="32" VerticalAlignment="Top" Margin="-2,-2,-2,0"/>
+        <ComboBox Name="comboThemeSelector" Margin="0,4,7,0" HorizontalAlignment="Right" Width="100" FontSize="10" Height="20" VerticalAlignment="Top" Background="Transparent" />
+        <Grid Margin="-1,-1,0,0">
+            <Border Style="{DynamicResource MuboxServerWindowBorderStyle}" BorderThickness="2" CornerRadius="9" />
+        </Grid>
+        <Label Style="{DynamicResource MuboxServerLabelStyle}" FontSize="10" x:Name="label1" Margin="0,0,163,5" Height="25" VerticalAlignment="Bottom" HorizontalContentAlignment="Right" Content="Listen Port" HorizontalAlignment="Right" Width="70" />
+        <Button Style="{DynamicResource MuboxButtonStyle}" Height="19" HorizontalAlignment="Right" Margin="0,0,63,9" x:Name="buttonStartServer" VerticalAlignment="Bottom" Width="45" Click="buttonStartServer_Click" Content="Start" ToolTip="Click this Button to Start or Stop accepting Client connections"/>
+        <TextBox FontSize="10" Margin="0,0,114,9" x:Name="textListenPort" Text="17520" Height="19" VerticalAlignment="Bottom" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                 ToolTip="This is the Port Number that the Server allows Clients to connect to" TextChanged="textListenPort_TextChanged" HorizontalAlignment="Right" Width="48" />
+        <TextBlock FontFamily="Trebuchet MS" Foreground="{DynamicResource MuboxPrimaryContrastColorBrush}" FontStyle="Italic" FontSize="33" Padding="0" HorizontalAlignment="Left" Margin="8,0,0,0" x:Name="blockTitleFore1" Width="190" Height="48" VerticalAlignment="Top"><Run Text="Mubox"/></TextBlock>
+        <TextBlock FontFamily="Trebuchet MS" Foreground="{DynamicResource MuboxHiliteContrastColorBrush}" FontStyle="Italic" FontSize="33" Padding="0" HorizontalAlignment="Left" Margin="8,-2,0,0" x:Name="blockTitleFore2" Width="190" Height="48" VerticalAlignment="Top"><Run Text="Mubox"/></TextBlock>
+        <TextBlock FontFamily="Trebuchet MS" Foreground="Black" FontStyle="Italic" FontSize="33" Padding="0" HorizontalAlignment="Left" Margin="8,-1,0,0" x:Name="blockTitleBack" Width="190" Height="48" VerticalAlignment="Top"><Run Text="Mubox"/></TextBlock>
+        <TextBlock FontStyle="Italic" FontSize="10" Height="21" Margin="109,9,156,0" x:Name="textBlock1" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment"><Run Text="Multiboxing Tools for Windows"/></TextBlock>
+        <Button Style="{DynamicResource MuboxButtonStyle}" Height="19" HorizontalAlignment="Left" Margin="10,0,0,9" Name="buttonConfigureMulticast" VerticalAlignment="Bottom" Width="150" Click="buttonConfigureMulticast_Click" ToolTip="Open a Dialog where you can Configure the Keyboard">Configure Keyboard</Button>
+        <Button Style="{DynamicResource MuboxButtonStyle}" Height="19" HorizontalAlignment="Right" Margin="0,0,12,9" Name="buttonExit" VerticalAlignment="Bottom" Width="45" ToolTip="Exit Mubox Server" Click="buttonExit_Click">Exit</Button>
+        <ListView BorderBrush="Transparent" SelectionMode="Single" Background="Transparent" Margin="0,25,0,30" x:Name="listBox1" Focusable="False" IsTabStop="False" FocusVisualStyle="{DynamicResource ClientListViewItemContainerStyle}" SelectionChanged="listBox1_SelectionChanged">
+            <ListView.Resources>
+                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="Transparent" />
+                <SolidColorBrush x:Key="{x:Static SystemColors.ControlBrushKey}" Color="Transparent" />
+                <SolidColorBrush x:Key="{x:Static SystemColors.WindowBrushKey}" Color="Transparent" />
+                <Style TargetType="ListViewItem">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type ListViewItem}">
+                                <Grid Cursor="Hand">
+                                    <!--
+                                    <Border x:Name="selectionBorder" Background="Transparent" CornerRadius="5" Padding="3">
+                                        <Border x:Name="selectionBorderOverlay1" Background="Transparent" CornerRadius="7" Padding="2">
+                                    -->
+                                    <Border x:Name="selectionBorderOverlay2" Background="Transparent" CornerRadius="9" Padding="4,4,4,7" BorderBrush="Transparent" BorderThickness="2,1,2,1">
+                                        <ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                                    </Border>
+                                    <!--
+                                        </Border>
+                                    </Border>
+                                    -->
+                                </Grid>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsSelected" Value="true">
+                                        <!--
+                                        <Setter Property="Background" TargetName="selectionBorder" Value="{DynamicResource MuboxHiliteColorBrush}" />
+                                        <Setter Property="Background" TargetName="selectionBorderOverlay1" Value="{DynamicResource MuboxHiliteColorBrush}" />
+                                        -->
+                                        <Setter Property="Background" TargetName="selectionBorderOverlay2">
+                                            <Setter.Value>
+                                                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                                    <GradientStop Offset="0" Color="{DynamicResource MuboxPrimaryColor}" />
+                                                    <GradientStop Offset="0.4" Color="{DynamicResource MuboxBackgroundColor}" />
+                                                    <GradientStop Offset="0.9" Color="{DynamicResource MuboxBackgroundColor}" />
+                                                    <GradientStop Offset="1" Color="{DynamicResource MuboxHiliteContrastColor}" />
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                        <Setter Property="BorderBrush" TargetName="selectionBorderOverlay2">
+                                            <Setter.Value>
+                                                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                                    <GradientStop Offset="0" Color="{DynamicResource MuboxHiliteContrastColor}" />
+                                                    <GradientStop Offset="0.25" Color="{DynamicResource MuboxBackgroundColor}" />
+                                                    <GradientStop Offset="0.75" Color="{DynamicResource MuboxBackgroundColor}" />
+                                                    <GradientStop Offset="1" Color="{DynamicResource MuboxPrimaryColor}" />
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </ListView.Resources>
+            <ListView.ItemsSource>
+                <Binding Source="{StaticResource ClientListViewSource}" />
+            </ListView.ItemsSource>
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel VerticalAlignment="Center" HorizontalAlignment="Center" MaxWidth="560" MaxHeight="110" />
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <Grid Margin="0,0,0,0">
+                            <Label FontFamily="Tahoma" FontSize="13" Margin="0,0,0,0" Padding="3,1,3,0" Foreground="Black" Content="{Binding DisplayName}" HorizontalContentAlignment="Center"></Label>
+                            <Label FontFamily="Tahoma" FontSize="13" Margin="2,2,0,0" Padding="3,1,3,0" Foreground="Black" Content="{Binding DisplayName}" HorizontalContentAlignment="Center"></Label>
+                            <Label FontFamily="Tahoma" FontSize="13" Margin="1,1,0,0" Padding="3,1,3,0" Foreground="White" Content="{Binding DisplayName}" HorizontalContentAlignment="Center"></Label>
+                        </Grid>
+                        <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                            <Label FontSize="8" Padding="0" Foreground="Silver" Content="{Binding Address}" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom"></Label>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Label FontSize="8" Padding="0" Foreground="{DynamicResource MuboxPrimaryContrastColorBrush}" Content="{Binding PerformanceInfo.IsWindowResponding}" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Label FontSize="7" Padding="0" Foreground="{DynamicResource MuboxPrimaryColorBrush}" Content="{Binding PerformanceInfo.WorkingSet}" VerticalAlignment="Stretch" VerticalContentAlignment="Center" />
+                                <Label FontSize="6" Padding="0" Foreground="{DynamicResource MuboxPrimaryContrastColorBrush}" Content=" MB" VerticalAlignment="Stretch" VerticalContentAlignment="Center" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Label FontSize="6" Padding="0" Foreground="{DynamicResource MuboxPrimaryContrastColorBrush}" Content="Tx=" VerticalAlignment="Stretch" VerticalContentAlignment="Center" />
+                                <Label FontSize="8" Padding="0" Foreground="{DynamicResource MuboxPrimaryColorBrush}" Content="{Binding PerformanceInfo.NetworkSendTime}" VerticalAlignment="Stretch" VerticalContentAlignment="Center" />
+                                <Label FontSize="6" Padding="0" Foreground="{DynamicResource MuboxPrimaryContrastColorBrush}" Content="ms / Rx=" VerticalAlignment="Stretch" VerticalContentAlignment="Center" />
+                                <Label FontSize="8" Padding="0" Foreground="{DynamicResource MuboxPrimaryColorBrush}" Content="{Binding Latency}" VerticalAlignment="Stretch" VerticalContentAlignment="Center" />
+                                <Label FontSize="6" Padding="0" Foreground="{DynamicResource MuboxPrimaryContrastColorBrush}" Content="ms" VerticalAlignment="Stretch" VerticalContentAlignment="Center" />
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Window>

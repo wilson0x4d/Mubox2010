@@ -1,0 +1,24 @@
+﻿<Window x:Class="Mubox.QuickLaunch.AppWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Mubox" Height="700" Width="490" HorizontalContentAlignment="Left" VerticalContentAlignment="Stretch" Icon="/Mubox.QuickLaunch;component/network_center.ico"
+        Loaded="OnLoaded"
+        Top="8" Left="128" WindowStartupLocation="Manual" Topmost="False">
+    <Window.Resources>
+        <Image x:Key="imageMenuHelpIcon" Stretch="UniformToFill" Height="16" Width="16" Source="/Mubox.QuickLaunch;component/Content/Images/Help.png" />
+        <Image x:Key="imageShortcutIcon" Stretch="UniformToFill" Height="16" Width="16" Source="/Mubox.QuickLaunch;component/Content/Images/GotoShortcutsHS.png" />
+        <Image x:Key="imageNavForwardIcon" Stretch="UniformToFill" Height="16" Width="16" Source="/Mubox.QuickLaunch;component/Content/Images/NavForward.png" />
+    </Window.Resources>
+    <Grid>
+        <Frame x:Name="frameContentPage"
+               ScrollViewer.CanContentScroll="False"
+               ScrollViewer.VerticalScrollBarVisibility="Hidden"
+               ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+               NavigationUIVisibility="Hidden"
+               Navigated="frameContentPage_Navigated"
+               NavigationFailed="frameContentPage_NavigationFailed"
+               NavigationStopped="frameContentPage_Navigated"
+               >
+        </Frame>
+    </Grid>
+</Window>
